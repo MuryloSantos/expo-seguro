@@ -63,7 +63,6 @@ export default function SolSeguro() {
     <View style={styles.container}>
       {/* Logo no topo */}
       <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
-
       {/* Índice UV e nível */}
       <View style={styles.uvContainer}>
     <Text style={styles.uvText}>ÍNDICE UV: </Text>
