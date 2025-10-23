@@ -1,16 +1,16 @@
 {
   "$schema": "./.vscode/expo-xdl.json",
   "expo": {
-    "name": "SolSeguro",
-    "slug": "solseguro-app",
+    "name": "",
+    "slug": "",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/logo2.png",
+    "icon": "./assets/images/Logo2.png",
     "scheme": "solseguroapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/logo2.png",
+      "image": "./assets/images/Logo2.png",
       "resizeMode": "contain",
       "backgroundColor": "#E0F7FA"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo2.png",
+        "foregroundImage": "./assets/images/Logo2.png",
         "backgroundColor": "#E0F7FA"
       },
       "edgeToEdgeEnabled": true,
