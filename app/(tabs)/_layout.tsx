@@ -29,10 +29,10 @@ export default function TabLayout() {
           shadowOpacity: 0,               // remove sombra no iOS
         },
         headerTitleStyle: {
-          marginTop: 18,
+          marginTop: 16,
           color: '#000000ff',               // cor do título
           fontWeight: 'bold',
-          fontSize: 20,
+          fontSize: 30,
         },
       }}>
       <Tabs.Screen
@@ -45,7 +45,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index1"
         options={{
-          title: 'Tab One',
+          title: 'Explorar',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
