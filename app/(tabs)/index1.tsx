@@ -97,7 +97,7 @@ const Fps = () => {
     <View style={styles.componentSection}>
       <Text style={styles.fpsTitle}>O que é FPS? </Text>
       <Text style={styles.bodyText}>
-      "FPS sol" é uma maneira informal de se referir ao Fator de Proteção Solar (FPS), um índice que indica o tempo extra que a pele fica protegida contra os raios ultravioleta (UV) em comparação com a pele desprotegida. Quanto maior o número do FPS, mais raios UVB o produto bloqueia, ajudando a prevenir queimaduras solares, envelhecimento precoce, manchas e o risco de câncer de pele. 
+      "FPS" é uma maneira informal de se referir ao Fator de Proteção Solar (FPS), um índice que indica o tempo extra que a pele fica protegida contra os raios ultravioleta (UV) em comparação com a pele desprotegida. Quanto maior o número do FPS, mais raios UVB o produto bloqueia, ajudando a prevenir queimaduras solares, envelhecimento precoce, manchas e o risco de câncer de pele. 
       </Text>
    </View>
  );
