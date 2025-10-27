@@ -38,32 +38,36 @@ const styles = StyleSheet.create({
   },
   
   subTitle: {
-    fontSize: 25,
+    fontSize: 22,
     color: '#000000ff', 
     fontWeight: 'bold', 
+    marginVertical: 9,
+    width: '85%',
+    textAlign: 'left',
+    paddingHorizontal: 14,
   }, 
 
   fpsTitle: {
-    fontSize: 18,  
+    fontSize: 20,  
     color: '#00000B',  
     fontWeight: 'bold',
-    marginVertical: 2,
+    
   },
 
   bodyText: {
-    fontSize: 16,        
+    fontSize: 18,        
     color: '#333333',   
-    lineHeight: 16, 
+    lineHeight: 18, 
     marginVertical: 1,
   },
   RoupasTitle: {
-    fontSize: 18,  
+    fontSize: 20,  
     color: '#00000B',
     fontWeight: 'bold',
     marginVertical: 2,
   },
   RiscosTitle: {
-    fontSize: 18,  
+    fontSize: 20,  
     color: '#00000B',
     fontWeight: 'bold',
     marginVertical: 2,
@@ -86,9 +90,7 @@ export default function index() {
 
 const Entenda = () => {
   return (
-    
-      <Text style={styles.subTitle}>Entenda a proteção</Text>
-    
+      <Text style={styles.subTitle}>Entenda a proteção</Text>    
 );
 }
 
