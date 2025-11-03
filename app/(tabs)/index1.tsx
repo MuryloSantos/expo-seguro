@@ -1,127 +1,140 @@
-import { StyleSheet } from 'react-native';
 import { Text, View } from '@/components/Themed';
-
+import { ScrollView, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#E0F7FA',
+    paddingTop: 0,
     alignItems: 'center',
-    paddingTop: 0, 
-    backgroundColor: '#E0F7FA', 
   },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: "#000000ff" 
+    color: '#000000ff',
+    marginBottom: 10,
   },
   separator: {
-    marginVertical: 0, 
+    marginVertical: 0,
     height: 1,
     width: '80%',
   },
-
   componentSection: {
- 
-    marginVertical: 10, 
+    marginVertical: 10,
     alignItems: 'flex-start',
-    width: '80%',
-
-    backgroundColor: '#fffefece', 
-    borderRadius: 10,          
-    padding: 12,               
-
+    width: '95%',
+    backgroundColor: '#ffffffce',
+    borderRadius: 10,
+    padding: 15,
     elevation: 5,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
   },
-  
   subTitle: {
     fontSize: 22,
-    color: '#000000ff', 
-    fontWeight: 'bold', 
-    marginVertical: 9,
-    width: '85%',
-    textAlign: 'left',
-    paddingHorizontal: 14,
-  }, 
-
-  fpsTitle: {
-    fontSize: 20,  
-    color: '#00000B',  
+    color: '#000000ff',
     fontWeight: 'bold',
-    
+    marginVertical: 9,
+    width: '93%',
+    textAlign: 'left',
+    marginTop: 30,
   },
-
+  fpsTitle: {
+    fontSize: 20,
+    color: '#00000B',
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
   bodyText: {
-    fontSize: 18,        
-    color: '#333333',   
-    lineHeight: 18, 
+    fontSize: 18,
+    color: '#333333',
+    lineHeight: 22,
     marginVertical: 1,
+     // deixa o texto alinhado nas bordas
   },
   RoupasTitle: {
-    fontSize: 20,  
+    fontSize: 20,
     color: '#00000B',
     fontWeight: 'bold',
     marginVertical: 2,
+    marginBottom: 20,
   },
   RiscosTitle: {
-    fontSize: 20,  
+    fontSize: 20,
     color: '#00000B',
     fontWeight: 'bold',
     marginVertical: 2,
-  }, 
+    marginBottom: 20,
+  },
 });
 
-export default function index() {
+export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}></Text>
-      <View style={styles.separator} lightColor="#000000" darkColor="rgba(255,255,255,0.1)" />
+      {/* Scroll principal */}
+      <ScrollView
+        contentContainerStyle={{
+          alignItems: 'center',
+          paddingBottom: 70, // evita corte no final
+        }}
+        showsVerticalScrollIndicator={false}
+      >
 
-      <Entenda />
-      <Fps />
-      <Roupas />
-      <Riscos />
+        <Entenda />
+        <Fps />
+        <Roupas />
+        <Riscos />
+      </ScrollView>
     </View>
-);
+  );
 }
 
 const Entenda = () => {
-  return (
-      <Text style={styles.subTitle}>Entenda a proteção</Text>    
-);
-}
+  return <Text style={styles.subTitle}>Entenda a proteção</Text>;
+};
 
 const Fps = () => {
   return (
     <View style={styles.componentSection}>
-      <Text style={styles.fpsTitle}>O que é FPS? </Text>
+      <Text style={styles.fpsTitle}>O que é FPS?</Text>
       <Text style={styles.bodyText}>
-      "FPS" é uma maneira informal de se referir ao Fator de Proteção Solar (FPS), um índice que indica o tempo extra que a pele fica protegida contra os raios ultravioleta (UV) em comparação com a pele desprotegida. Quanto maior o número do FPS, mais raios UVB o produto bloqueia, ajudando a prevenir queimaduras solares, envelhecimento precoce, manchas e o risco de câncer de pele. 
+        “FPS” é uma maneira informal de se referir ao Fator de Proteção Solar
+        (FPS), um índice que indica o tempo extra que a pele fica protegida
+        contra os raios ultravioleta (UV) em comparação com a pele
+        desprotegida. Quanto maior o número do FPS, mais raios UVB o produto
+        bloqueia, ajudando a prevenir queimaduras solares, envelhecimento
+        precoce, manchas e o risco de câncer de pele.
       </Text>
-   </View>
- );
-} 
+    </View>
+  );
+};
 
 const Roupas = () => {
-   return (
+  return (
     <View style={styles.componentSection}>
-     <Text style={styles.RoupasTitle}>Roupas com proteção UV</Text>
-     <Text style={styles.bodyText}>
-      Roupas com proteção UV são tecidos especialmente projetados para bloquear ou absorver os raios ultravioleta do sol, oferecendo uma camada adicional de defesa contra os danos causados pela exposição solar. Essas roupas são ideais para atividades ao ar livre, proporcionando conforto e segurança para a pele.
-     </Text>
+      <Text style={styles.RoupasTitle}>Roupas com proteção UV</Text>
+      <Text style={styles.bodyText}>
+        Roupas com proteção UV são tecidos especialmente projetados para
+        bloquear ou absorver os raios ultravioleta do sol, oferecendo uma camada
+        adicional de defesa contra os danos causados pela exposição solar. Essas
+        roupas são ideais para atividades ao ar livre, proporcionando conforto e
+        segurança para a pele.
+      </Text>
     </View>
- )};
+  );
+};
 
- const Riscos = () => {
-   return (
+const Riscos = () => {
+  return (
     <View style={styles.componentSection}>
-     <Text style={styles.RiscosTitle}>Riscos da exposição solar excessiva</Text>
-     <Text style={styles.bodyText}>
-      A exposição solar sem proteção adequada pode levar a diversos riscos para a saúde da pele, incluindo queimaduras solares, envelhecimento precoce, danos ao DNA das células da pele e aumento do risco de câncer de pele. É essencial utilizar roupas com proteção UV, além de protetor solar, para minimizar esses riscos e manter a pele saudável.
-     </Text>
+      <Text style={styles.RiscosTitle}>
+        Riscos da exposição solar excessiva
+      </Text>
+      <Text style={styles.bodyText}>
+        A exposição solar sem proteção adequada pode levar a diversos riscos
+        para a saúde da pele, incluindo queimaduras solares, envelhecimento
+        precoce, danos ao DNA das células da pele e aumento do risco de câncer
+        de pele. É essencial utilizar roupas com proteção UV, além de protetor
+        solar, para minimizar esses riscos e manter a pele saudável.
+      </Text>
     </View>
- );
+  );
 };

@@ -1,10 +1,8 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
+import { Tabs } from 'expo-router';
 import React from 'react';
-import { Pressable } from 'react-native';
 
 import { useColorScheme } from '@/components/useColorScheme';
-import Colors from '@/constants/Colors';
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -32,7 +30,7 @@ export default function TabLayout() {
           marginTop: 16,
           color: '#000000ff',               // cor do título
           fontWeight: 'bold',
-          fontSize: 30,
+          fontSize: 25,
         },
       }}>
       <Tabs.Screen
@@ -47,20 +45,7 @@ export default function TabLayout() {
         options={{
           title: 'Explorar',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          
         }}
       />
       <Tabs.Screen
@@ -68,6 +53,20 @@ export default function TabLayout() {
         options={{
           title: 'Perfil',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          /*headerLeft: () => (  
+            <Link href="/modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={70}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),*/
     }}
   />
     </Tabs>
